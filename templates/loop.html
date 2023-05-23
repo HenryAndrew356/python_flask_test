@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block heading %}
+    Page for test Loops 
+{% endblock %}
+
+
+{% block body %}
+    {% for name in names_list %}
+        <li>{{ name }}</li>
+    {% endfor %}
+{% endblock %}
