@@ -2,11 +2,12 @@
 {% extends "layout.html" %}
 
 {% block heading %}
-    TitleOfPage_01:Inh
+    Pagina 01 de Inheritance
 {% endblock %}
 
 
 {% block body %}
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid fugiat voluptate dolores! Maiores laboriosam exercitationem odit! Itaque commodi quasi sapiente repudiandae consectetur voluptatem voluptates atque aliquam beatae, ratione blanditiis eos.</p>
-    <a href="{{ url_for('page_02_inh') }}"> Go to Second page inheritance</a>
+    <a href="{{ url_for('page_02_inh') }}">Ir a la segunda pagina de Inheritance</a>
+    <br>
+    <a href="{{ url_for('init') }}">Retornar a la Primera Pagina</a>
 {% endblock %}

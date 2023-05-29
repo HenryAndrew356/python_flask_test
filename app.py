@@ -10,6 +10,12 @@ app.config["SESSION_TYPE"]="filesystem"
 Session(app)
 
 
+
+
+@app.route('/')
+def init():
+    return render_template('init.html')
+
 #       FORMS
 
 @app.route('/index')
