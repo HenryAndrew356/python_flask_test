@@ -2,13 +2,35 @@
 
 {% extends "layout.html" %}
 
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/styles_init.css">
+{% endblock %}
+
 {% block heading %}
     Page for test Loops 
 {% endblock %}
 
 
 {% block body %}
-    {% for name in names_list %}
-        <li>{{ name }}</li>
-    {% endfor %}
+    
+
+    <div class="div_title_class">
+        <h2>
+            pagina de LOOP
+        </h2>
+    </div>
+    <div class="parent">
+        <div class="child_01">
+            {% for name in names_list %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </div>
+        <div class="child_01">
+            <h3>
+                <a href="{{ url_for('init') }}">Retornar a Pagina Principal</a>
+            </h3>
+        </div>
+    </div>
+
 {% endblock %}

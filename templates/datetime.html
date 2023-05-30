@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Is it New Year?</title>
-        <style>
-            body {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        {% if new_year %}
-            <h1>Yes! Happy New Year!</h1>
-        {% else %}
-            <h1>NO</h1>
-        {% endif %}
-        <hi>{{ now_field }}</hi>
-    </body>
-</html>
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/styles_init.css">
+{% endblock %}
+
+
+{% block body %}
+    <div class="div_title_class">
+        <h2>
+            Pagina de testeo de FORM
+        </h2>
+    </div>
+    <div class="parent">
+        <div class="child_01">
+            {% if new_year %}
+                <h1>Yes! Happy New Year!</h1>
+            {% else %}
+                <h1>NO</h1>
+            {% endif %}
+            <hi>{{ now_field }}</hi>
+        </div>
+        <div class="child_01">
+            <h3>
+                <a href="{{ url_for('init') }}">Retornar a Pagina Principal</a>
+            </h3>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+.div_title_class
+{
+    top: 100%;
+    width: 100vw;
+    text-align: center;
+}
+
+.child_01
+{
+    width:50%;
+    float:left;
+    text-align: center;
+}

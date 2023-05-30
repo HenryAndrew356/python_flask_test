@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Website!</title>
-    </head>
-    <body>
-        <h1>{{ headline_field }}</h1>
-    </body>
-</html>
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/styles_init.css">
+{% endblock %}
+
+{% block heading %}
+    Notes
+{% endblock %}
+
+{% block body %}
+    <div class="div_title_class">
+        <h2>
+            pagina NOTES
+        </h2>
+    </div>
+    <div class="parent">
+        <div class="child_01">
+            <h2>
+                Retorno de variable random
+            </h2>
+            <a href="{{ url_for('route_var_01') }}">Presiona para otro valor</a>
+            <h2>
+                {{ headline_field }}
+            </h2>
+        </div>
+        <div class="child_01">
+            <h3>
+                <a href="{{ url_for('init') }}">Retornar a Pagina Principal</a>
+            </h3>
+        </div>
+    </div>
+{% endblock %}

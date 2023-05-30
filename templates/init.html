@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 {% extends "layout.html" %}
 
+{% block styles %}
+    <link rel="stylesheet" href="/static/styles_init.css">
+{% endblock %}
+
+
 {% block heading %}
     
 {% endblock %}
 
 {% block body %}
-    <div class="title_class">
-        <h1>Pagina 01 de Inheritance</h1>
+    <div class="div_title_class">
+        <h2>
+            Pagina Inicial
+        </h2>
+    </div>
+    <div class="parent">
+        <div class="child_01">
+            <h3>
+                <a href="{{ url_for('index') }}">Forms</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('page_01_inh') }}">Inheritance</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('def_loop_field') }}">Loops</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('macros_link') }}">Macros</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('route_datetime') }}">Conditions</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('route_notes') }}">Notes</a>
+            </h3>
+            <h3>
+                    <a href="{{ url_for('init') }}">Routes 01</a>
+            </h3>
+            <h3>
+                <a href="{{ url_for('route_var_01') }}">Variables 01</a>
+            </h3>
+        </div>
+        <div class="child_01">
+            <h1>
+                
+            </h1>
+        </div>
     </div>
 {% endblock %}

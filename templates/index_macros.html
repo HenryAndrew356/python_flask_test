@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 
+
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/styles_init.css">
+{% endblock %}
+
+
 {% macro error(message) %}
     <div class="error">
         {{ message }}
@@ -7,9 +14,23 @@
 {% endmacro %}
 
 {% block body %}
+    <div class="div_title_class">
+        <h2>
+            Pagina de testeo de FORM
+        </h2>
+    </div>
+    <div class="parent">
+        <div class="child_01">
 
-    {{ error("There was a problem.") }}
+            {{ error("There was a problem.") }}
 
-    {{ error("There was another problem.") }}
+            {{ error("There was another problem.") }}
 
+        </div>
+        <div class="child_01">
+            <h3>
+                <a href="{{ url_for('init') }}">Retornar a Pagina Principal</a>
+            </h3>
+        </div>
+    </div>
 {% endblock %}
